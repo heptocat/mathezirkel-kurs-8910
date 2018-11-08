@@ -1,0 +1,229 @@
+\documentclass[11pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usetheme{Antibes}
+
+\begin{document}
+	\author{Matheschülerzirkel 2018/2019}
+	\title{Magische Quadrate}
+	%\subtitle{}
+	%\logo{}
+	%\institute{}
+	%\date{}
+	%\subject{}
+	%\setbeamercovered{transparent}
+	%\setbeamertemplate{navigation symbols}{}
+\begin{frame}[plain]
+	%\maketitle
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{Melencolia_I_(Durero)}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{}
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{albrecht-duerer-magisches-quadrat}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{}
+		\underline{Frage: Wie kann man solche systematisch Quadrate erzeugen?}
+	\begin{itemize}
+		\item Forderung: Summe der Zeilen, Spalten und Diagonalen soll gleich sein
+		\item Dimension $4\times4$
+		\item zur Vereinfachung: nur mit 0 und 1 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{}
+\underline{Frage: Wie kann man solche systematisch Quadrate erzeugen?}
+\begin{itemize}
+	\item Forderung: Summe der Zeilen, Spalten und Diagonalen soll gleich sein
+	\item Dimension $4\times4$
+	\item zur Vereinfachung: nur mit 0 und 1 
+\end{itemize}
+\underline{triviale F\"alle}:\\
+\[
+\begin{array}{|cccc|}
+\hline
+0 & 0 & 0 & 0 \\ 
+0 & 0 & 0 & 0 \\ 
+0 & 0 & 0 & 0 \\ 
+0 & 0 & 0 & 0 \\
+\hline
+\end{array} 
+\qquad \qquad \qquad
+\begin{array}{|cccc|}
+\hline
+1 & 1 & 1 & 1 \\ 
+1 & 1 & 1 & 1 \\ 
+1 & 1 & 1 & 1 \\ 
+1 & 1 & 1 & 1 \\
+\hline
+\end{array} 
+\]
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Aufgabe 1}
+\begin{center}
+Findet alle möglichen magischen Quadrate, deren Zeilen-, Spalten-, Diagonalsumme 1 ergibt.\\
+Wie viele gibt es?
+\end{center} 
+\end{frame}
+
+\begin{frame}
+	\frametitle{Basen}
+	
+	 \begin{align*}
+	\mathcal{Q} = 
+	\begin{array}{|cccc|}
+	\hline
+	1 & 0 & 0 & 0 \\ 
+	0 & 0 & 1 & 0 \\ 
+	0 & 0 & 0 & 1 \\ 
+	0 & 1 & 0 & 0 \\
+	\hline
+	\end{array} 
+	\qquad
+	\mathcal{R} = 
+	\begin{array}{|cccc|}
+	\hline
+	0 & 0 & 0 & 1 \\ 
+	1 & 0 & 0 & 0 \\ 
+	0 & 0 & 1 & 0 \\ 
+	0 & 1 & 0 & 0 \\
+	\hline
+	\end{array} 
+	\qquad
+	\mathcal{S} = 
+	\begin{array}{|cccc|}
+	\hline
+	0 & 0 & 1 & 0 \\ 
+	1 & 0 & 0 & 0 \\ 
+	0 & 1 & 0 & 0 \\ 
+	0 & 0 & 0 & 1 \\
+	\hline
+	\end{array}
+	\\
+	\mathcal{T} = 
+	\begin{array}{|cccc|}
+	\hline
+	0 & 0 & 1 & 0 \\ 
+	0 & 1 & 0 & 0 \\ 
+	0 & 0 & 0 & 1 \\ 
+	1 & 0 & 0 & 0 \\
+	\hline
+	\end{array} 
+	\qquad
+	\mathcal{U} = 
+	\begin{array}{|cccc|}
+	\hline
+	1 & 0 & 0 & 0 \\ 
+	0 & 0 & 0 & 1 \\ 
+	0 & 1 & 0 & 0 \\ 
+	0 & 0 & 1 & 0 \\
+	\hline
+	\end{array} 
+	\qquad
+	\mathcal{V} = 
+	\begin{array}{|cccc|}
+	\hline
+	0 & 0 & 0 & 1 \\ 
+	0 & 1 & 0 & 0 \\ 
+	1 & 0 & 0 & 0 \\ 
+	0 & 0 & 1 & 0 \\
+	\hline
+	\end{array}
+	\\
+	\mathcal{W} = 
+	\begin{array}{|cccc|}
+	\hline
+	0 & 1 & 0 & 0 \\ 
+	0 & 0 & 1 & 0 \\ 
+	1 & 0 & 0 & 0 \\ 
+	0 & 0 & 0 & 1 \\
+	\hline
+	\end{array}
+	\qquad
+	\mathcal{X} = 
+	\begin{array}{|cccc|}
+	\hline
+	0 & 1 & 0 & 0 \\ 
+	0 & 0 & 0 & 1 \\ 
+	0 & 0 & 1 & 0 \\ 
+	1 & 0 & 0 & 0 \\
+	\hline
+	\end{array}   
+	\end{align*}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Aufgabe 2}
+	\begin{center}
+		Finde die Basisquadrate, aus denen das magische Quadrat zusammengesetzt ist!
+		
+		\begin{align*}
+		\mathcal{A} =
+		\begin{array}{|cccc|}
+		\hline
+		2 & 0 & 7 & 3 \\ 
+		7 & 3 & 2 & 0 \\ 
+		3 & 7 & 0 & 2 \\ 
+		0 & 2 & 3 & 7 \\
+		\hline
+		\end{array}  
+		\end{align*}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Aufgabe 3}
+\begin{center}
+	
+	Erg\"anze das untenstehende Quadrat so, dass die Summe der Zahlen alles Zeilen, Spalten und Diagonalen gleich ist. 
+\end{center}
+\begin{align*}
+\mathcal{B} =
+\begin{array}{|cccc|}
+\hline
+2 & 7 & 9 & 8 \\ 
+& 6 &  &  \\ 
+&  & 9 &  \\ 
+&  & 7 &  \\
+\hline
+\end{array}  
+\end{align*}
+\end{frame}
+
+\begin{frame}
+\frametitle{Darstellung des Dürer-Quadrats}
+\begin{align*}
+\mathcal{D} =
+\begin{array}{|cccc|}
+\hline
+16 & 3 & 2 & 13 \\ 
+5 & 10 &  11& 8  \\ 
+9 &  6 & 7 &  12\\ 
+4 &  15 & 14 &  1\\
+\hline
+\end{array}  
+\end{align*}
+\[
+ = \quad  11 * \mathcal{Q} + 9*\mathcal{B} + 5*\mathcal{U} + 4*\mathcal{R} + 3*\mathcal{X} + \mathcal{S} + \mathcal{T}
+\]
+
+
+\end{frame}
+
+\end{document}

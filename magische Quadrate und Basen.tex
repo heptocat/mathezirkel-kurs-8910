@@ -1,0 +1,251 @@
+\documentclass{uebungszettel}
+
+\geometry{bmargin=2.5cm}
+
+\begin{document}
+	
+\pagestyle{plain}
+\setlength{\aufgabenskip}{1.5em}
+	
+	
+\maketitle{Klasse 8./9./10}{}{Magische Quadrate}
+	
+\thispagestyle{plain}
+
+\underline{Organisatorisches:}
+\begin{itemize}
+	\item Vorstellungsrunde (Lieblingsmathematiker oder Thema, Grund f\"ur Teilnahme am Zirkel)
+	\item Themenw\"unsche
+	\item Termin\"anderung? Montag 17:30 
+\end{itemize}
+
+\begin{aufgabe}{Albrecht D\"urers Melancholia}
+	\begin{center}
+		
+	\includegraphics[width=0.7\textwidth]{Melencolia_I_(Durero)}
+	\end{center}
+
+	\begin{itemize}
+		\item Bild von Albrecht D\"urer, heute in Karlsruhe zu finden
+		\item 1514 gemalt
+		\item sehr bekannt, gab viele R\"atsel auf und wurde daher oft mit 		 Verschw\"orungstheorien in Verbindung gebracht
+	\end{itemize}
+\pagebreak
+\underline{Frage: Was hat das mit Mathe/Wissenschaft zu tun?}
+\begin{itemize}
+	\item Kugel
+	\item geometrische Form (Polyeder)
+	\item Sonnenaufgang = Erleuchtung in der Wissenschaft, Zeitmessung
+	\item Sanduhr
+	\item gr\"ubelndes Genie (D\"urer selbst?)
+	\item magisches Quadrat	
+\end{itemize}
+
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{albrecht-duerer-magisches-quadrat}
+	\end{center}
+
+\begin{itemize}
+	\item 1514 Jahreszahl
+	\item letzte Zeile: 4 und 1 entspricht D und A
+	\item Summe jeder Zeile, Spalte, Diagonale, Teilquadrate ergibt 34\\
+	$\rightarrow$ vollkommenes magisches Quadrat
+	\item jede Zahl zwischen 1 und 16 kommt genau einmal vor
+\end{itemize}
+\end{aufgabe}	
+
+\pagebreak
+\begin{aufgabe}{Basen finden}
+	\underline{Frage: Wie kann man solche systematisch Quadrate erzeugen?}
+	\begin{itemize}
+		\item Forderung: Summe der Zeilen, Spalten und Diagonalen soll gleich sein
+		\item Dimension $4\times4$
+		\item zur Vereinfachung: nur mit 0 und 1 
+	\end{itemize}
+	
+	\underline{triviale F\"alle}:\\
+	\[
+	\begin{array}{|cccc|}
+	\hline
+		0 & 0 & 0 & 0 \\ 
+		0 & 0 & 0 & 0 \\ 
+		0 & 0 & 0 & 0 \\ 
+		0 & 0 & 0 & 0 \\
+	\hline
+	\end{array} 
+	\qquad \qquad \qquad
+	\begin{array}{|cccc|}
+	\hline
+		1 & 1 & 1 & 1 \\ 
+		1 & 1 & 1 & 1 \\ 
+		1 & 1 & 1 & 1 \\ 
+		1 & 1 & 1 & 1 \\
+	\hline
+	\end{array} 
+	\]
+	
+	\underline{gesucht: Quadrat mit Summe 1:}\\
+	
+	\[
+		\mbox{Schritt \quad 1: \quad} 
+		\begin{array}{|cccc|}
+		\hline
+			1 & 0 & 0 & 0 \\ 
+			0 & 0 &  &  \\ 
+			0 &  & 0 &  \\ 
+			0 &  &  & 0 \\
+		\hline
+		\end{array} 
+		\qquad \qquad
+		\mbox{Schritt \quad 2: \quad} 
+		\begin{array}{|cccc|}
+		\hline
+		1 & 0 & 0 & 0 \\ 
+		0 & 0 & 1 & 0 \\ 
+		0 & 0 & 0 & 1 \\ 
+		0 & 1 & 0 & 0 \\
+		\hline
+		\end{array} 
+	\]
+	 \underline{ToDo:} Findet die \"ubrigen 7 M\"oglichkeiten
+	 
+	 \begin{align*}
+	 \mathcal{Q} = 
+	 	\begin{array}{|cccc|}
+	 		\hline
+			 1 & 0 & 0 & 0 \\ 
+			 0 & 0 & 1 & 0 \\ 
+			 0 & 0 & 0 & 1 \\ 
+			 0 & 1 & 0 & 0 \\
+	 		\hline
+	 	\end{array} 
+	 \qquad
+	 &\mathcal{R} = 
+		 \begin{array}{|cccc|}
+		 	\hline
+			 0 & 0 & 0 & 1 \\ 
+			 1 & 0 & 0 & 0 \\ 
+			 0 & 0 & 1 & 0 \\ 
+			 0 & 1 & 0 & 0 \\
+		 	\hline
+		 \end{array} 
+	\qquad
+	\mathcal{S} = 
+		\begin{array}{|cccc|}
+		\hline
+			0 & 0 & 1 & 0 \\ 
+			1 & 0 & 0 & 0 \\ 
+			0 & 1 & 0 & 0 \\ 
+			0 & 0 & 0 & 1 \\
+		\hline
+		\end{array}
+	\qquad
+	\mathcal{T} = 
+		\begin{array}{|cccc|}
+		\hline
+			0 & 0 & 1 & 0 \\ 
+			0 & 1 & 0 & 0 \\ 
+			0 & 0 & 0 & 1 \\ 
+			1 & 0 & 0 & 0 \\
+		\hline
+		\end{array} 
+		\\
+	\mathcal{U} = 
+		\begin{array}{|cccc|}
+		\hline
+			1 & 0 & 0 & 0 \\ 
+			0 & 0 & 0 & 1 \\ 
+			0 & 1 & 0 & 0 \\ 
+			0 & 0 & 1 & 0 \\
+		\hline
+		\end{array} 
+	\qquad
+	&\mathcal{V} = 
+		\begin{array}{|cccc|}
+		\hline
+			0 & 0 & 0 & 1 \\ 
+			0 & 1 & 0 & 0 \\ 
+			1 & 0 & 0 & 0 \\ 
+			0 & 0 & 1 & 0 \\
+		\hline
+		\end{array}
+	\qquad
+	\mathcal{W} = 
+		\begin{array}{|cccc|}
+		\hline
+			0 & 1 & 0 & 0 \\ 
+			0 & 0 & 1 & 0 \\ 
+			1 & 0 & 0 & 0 \\ 
+			0 & 0 & 0 & 1 \\
+		\hline
+		\end{array}
+	\qquad
+	\mathcal{X} = 
+		\begin{array}{|cccc|}
+		\hline
+			0 & 1 & 0 & 0 \\ 
+			0 & 0 & 0 & 1 \\ 
+			0 & 0 & 1 & 0 \\ 
+			1 & 0 & 0 & 0 \\
+		\hline
+		\end{array}   
+	 \end{align*}	
+\end{aufgabe}
+
+\begin{aufgabe}{Basteln}
+	Papier austeilen, ausschneiden lassen, kurz erkl\"aren
+\end{aufgabe}
+
+\begin{aufgabe}{Linearfaktoren finden}
+	Finde die Basisquadrate, aus denen die magischen Quadrate zusammengesetzt sind!
+
+	\begin{align*}
+		\mathcal{A} =
+		\begin{array}{|cccc|}
+		\hline
+			2 & 0 & 7 & 3 \\ 
+			7 & 3 & 2 & 0 \\ 
+			3 & 7 & 0 & 2 \\ 
+			0 & 2 & 3 & 7 \\
+		\hline
+		\end{array}  
+		= 2*\mathcal{Q} + 7*\mathcal{S} + 3*\mathcal{R}
+	\end{align*}
+\end{aufgabe}
+
+\pagebreak
+\begin{aufgabe}{Findest du's?}
+	Erg\"anze das untenstehende Quadrat so, dass die Summe der Zahlen alles Zeilen, Spalten und Diagonalen gleich ist. 
+	
+	\begin{align*}
+	\mathcal{B} =
+		\begin{array}{|cccc|}
+		\hline
+			2 & 7 & 9 & 8 \\ 
+			 & 6 &  &  \\ 
+			 &  & 9 &  \\ 
+			 &  & 7 &  \\
+		\hline
+		\end{array}  
+	\end{align*}
+	
+	\underline{Tipp:} Zwei weitere Zahlen sind leicht zu finden. \"Uberlege dir danach, was in der unteren linken Ecke stehen muss, damit die beiden hieraus zu folgernden Zahlen keine der anderen Bedingungen verletzen. (Falls du nicht weiterkommst, kannst du zur Not alle einstelligen Zahlen ausprobieren.)\\
+	\newline
+	\underline{Zusatz:} Es gibt insgesamt 12 verschiedene m\"ogliche L\"osungen, aber nur ein Quadrat erf\"ullt die zus\"atzliche Bedingung, dass auch die Summe aller Teilquadrate gleich sind. Findest du es? 
+\end{aufgabe}
+
+\begin{aufgabe}{Darstellung des Dürer-Quadrats}
+	\begin{align*}
+	\mathcal{D} =
+	\begin{array}{|cccc|}
+	\hline
+		16 & 3 & 2 & 13 \\ 
+		5 & 10 &  11& 8  \\ 
+		9 &  6 & 7 &  12\\ 
+		4 &  15 & 14 &  1\\
+	\hline
+	\end{array}  
+	\quad = \quad  11 * \mathcal{Q} + 9*\mathcal{B} + 5*\mathcal{U} + 4*\mathcal{R} + 3*\mathcal{X} + \mathcal{S} + \mathcal{T}
+	\end{align*}
+\end{aufgabe}
+\end{document}
