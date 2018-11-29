@@ -1,0 +1,48 @@
+==Verschlüsselung mittels Matrizen
+A)	Kurze Einführung in die Kryptologie
+	- Kryptographie
+	- Kryptanalysis
+	- Symmetrisch / Assymmetrische Verschlüsselungen
+	- Substitution / Transposition
+B) Transposition mittels Permutationsmatrix
+1. Transpositionen
+FRAGE	Transpositionen ausdenken
+	- rückwärts lesen
+	- spiegeln
+	Wie kann "abc" permutiert werden? Wie viele Permutationen gibt es?
+ERKLÄRUNG Gartenzauntransposition
+AUFGABE	eigenen Text verschlüsseln, vom Nachbar entschlüsseln lassen
+2. Rechnen mit Buchstaben
+ERKLÄRUNG Alphabetindexcodierung
+BEISPIEL Multiplikative / Additive Chiffre
+-> Einführung der Begriffe Modulo und Inverses
+HINWEIS "Inversenproblem" bei der Multiplikativen Chiffre
+AUFGABE Rechnen mit Modulo, kurz verschlüsseln und entschlüsseln
+3. Die Permutationsmatrix
+Kurze Wiederholung Matrizen Multiplikation
+DEFINITION Permutationsmatrix
+(a) Verschlüsseln
+BEISPIEL mit kurzem Text
+FRAGE welche Matrix ist das neutrale Element?
+AUFGABE Welche Permutationsmatrix braucht man für rückwärts lesen, spiegeln, Gartenzauntransposition?
+(b) Entschlüsseln
+FRAGE inverse Matrix zum vorherigen Beispiel finden
+BEISPIEL Entschlüsseln
+AUFGABE Inverse von Matrizen finden
+AUFGABE eigenen Text verschlüsseln, vom Nachbar entschlüsseln lassen
+
+C) HILL-CHIFFRE
+
+Hill-chiffre kombiniert Substitution und Transposition
+(a) Verschlüsseln (Beispiel + Aufgabe)
+(b) Entschlüsseln
+Nicht-trivial.
+Wie finde ich das Inverse einer Matrix?
+Es gibt nur das Inverse einer Matrix, wenn ihre Teilvektoren nicht kollinear sind
+<=> Determinante != 0
+
+Mathematische Fertigkeiten , die für das Entschlüsseln vermittelt werden müssen:
+Kollinearität, Determinante, Inverse einer Matrix bilden
+
+
+		
